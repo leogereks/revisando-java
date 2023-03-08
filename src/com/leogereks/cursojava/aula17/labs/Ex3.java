@@ -12,7 +12,6 @@ public class Ex3 {
         double salario;
 
         do {
-
             System.out.println("Entre com um nome de ate 3 letras:");
             nome=scanner.next();
             if (nome.length()<=3){
@@ -24,7 +23,6 @@ public class Ex3 {
 
         validador=false;
         do {
-
             System.out.println("Entre com a sua idade:");
             idade=scanner.nextInt();
             if (idade >=0 && idade <120){
@@ -36,7 +34,6 @@ public class Ex3 {
 
         validador=false;
         do {
-
             System.out.println("Entre com o seu salario:");
             salario=scanner.nextDouble();
             if (salario>0){
@@ -48,7 +45,6 @@ public class Ex3 {
 
         validador=false;
         do {
-
             System.out.println("Entre com o seu genero (m - masculino f - feminino):");
             sexo=scanner.next();
             if (sexo.equalsIgnoreCase("m")|| sexo.equalsIgnoreCase("f")){
@@ -60,7 +56,6 @@ public class Ex3 {
 
         validador=false;
         do {
-
             System.out.println("Informe seu estado civil: (c,s,v,d)");
             civil=scanner.next();
             if (civil.equalsIgnoreCase("c")|| civil.equalsIgnoreCase("s")|| civil.equalsIgnoreCase("v")|| civil.equalsIgnoreCase("d")){
