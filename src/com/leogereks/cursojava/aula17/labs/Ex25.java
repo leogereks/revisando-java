@@ -20,10 +20,7 @@ public class Ex25 {
             System.out.println("Informe a temperatura: "+i);
             temps = scanner.nextDouble();
 
-
             soma += temps;
-
-
 
             if (temps>maior){
                 maior=temps;
