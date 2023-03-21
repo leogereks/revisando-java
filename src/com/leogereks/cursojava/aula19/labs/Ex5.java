@@ -2,7 +2,7 @@ package com.leogereks.cursojava.aula19.labs;
 
 import java.util.Scanner;
 
-public class Exer2 {
+public class Ex5 {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -15,7 +15,7 @@ public class Exer2 {
             System.out.println("Informe valor da posicao: "+i);
             vetorA[i] = scan.nextInt();
 
-            vetorB[i] = vetorA[i] * 2;
+            vetorB[i] = vetorA[i] * i;
         }
         System.out.print("Vetor A = ");
         for (int i=0; i<vetorA.length; i++){
