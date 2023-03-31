@@ -4,7 +4,7 @@ public class ArrayMulti {
 
     public static void main(String[] args) {
 
-        double[][] notasAulunos = new double[30][4];
+        double[][] notasAulunos = new double[3][4];
 
         notasAulunos[0][0] = 10;
         notasAulunos[0][1] = 7;
@@ -21,7 +21,35 @@ public class ArrayMulti {
         notasAulunos[2][2] = 10;
         notasAulunos[2][3] = 7;
 
+        for (int i =0; i < notasAulunos.length; i++){
+            //System.out.println(notasAulunos[i]);
+            for (int j = 0; j < notasAulunos[i].length; j++){
+                System.out.print(notasAulunos[i][j]);
+            }
+            System.out.println();
+        }
+
+        notasAulunos[1][3] = 8;
+        System.out.println();
+
+        for (int i =0; i < notasAulunos.length; i++){
+            //System.out.println(notasAulunos[i]);
+            for (int j = 0; j < notasAulunos[i].length; j++){
+                System.out.print(notasAulunos[i][j]+"-");
+            }
+            System.out.println();
+        }
+
+        System.out.println("Calculando a media de cada aluno");
+
+        double soma=0;
+        for (int i =0; i < notasAulunos.length; i++){
+
+            for (int j = 0; j < notasAulunos[i].length; j++){
+                soma+= notasAulunos[i][j];
+            }
+            System.out.println("Media do aluno "+i+" é = "+(soma/4));
+        }
+
     }
-
-
 }
