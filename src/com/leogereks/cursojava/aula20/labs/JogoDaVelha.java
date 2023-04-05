@@ -22,7 +22,7 @@ public class JogoDaVelha {
                 System.out.println("Vez do jogador 1, escolha linha e coluna (1-3)");
                 sinal = 'X';
             }else{
-                System.out.println("Vez do jogador 1, escolha linha e coluna (1-3)");
+                System.out.println("Vez do jogador 2, escolha linha e coluna (1-3)");
                 sinal = 'O';
             }
 
@@ -51,8 +51,43 @@ public class JogoDaVelha {
                     System.out.println("Entrada invalida, tente novamente");
                 }
             }
+
+            linha--;
+            coluna--;
             if (jogoDaVelha[linha][coluna] == 'X'|| jogoDaVelha[linha][coluna] == 'O'){
+                System.out.println("Posiçao já ocupada pelo outro jogador, tentar novamente");
+            } else{
+                jogoDaVelha[linha][coluna] = sinal;
+                jogada++;
+            }
+
+            for (int i = 0; i < jogoDaVelha.length; i++){
+                for (int j = 0; j < jogoDaVelha[i].length; j++){
+                    System.out.print(jogoDaVelha[i][j]+" | ");
+                }
                 System.out.println();
+            }
+
+            if ((jogoDaVelha[0][0] == 'X' && jogoDaVelha[0][1] == 'X' && jogoDaVelha[0][2] == 'X')|| // linha 1
+                    (jogoDaVelha[1][0] == 'X' && jogoDaVelha[1][1] == 'X' && jogoDaVelha[1][2] == 'X')|| // linha 2
+                    (jogoDaVelha[2][0] == 'X' && jogoDaVelha[2][1] == 'X' && jogoDaVelha[2][2] == 'X')|| // linha 3
+                    (jogoDaVelha[0][0] == 'X' && jogoDaVelha[1][0] == 'X' && jogoDaVelha[2][0] == 'X')|| // coluna 1
+                    (jogoDaVelha[0][0] == 'X' && jogoDaVelha[1][1] == 'X' && jogoDaVelha[2][1] == 'X')|| // coluna 2
+                    (jogoDaVelha[0][2] == 'X' && jogoDaVelha[1][2] == 'X' && jogoDaVelha[2][2] == 'X')|| // coluna 3
+                    (jogoDaVelha[0][0] == 'X' && jogoDaVelha[1][1] == 'X' && jogoDaVelha[2][2] == 'X')){ // diagonal
+                ganhou = true;
+                System.out.println("Parabens, jogador 1 ganhou");
+            }else if ((jogoDaVelha[0][0] == 'O' && jogoDaVelha[0][1] == 'O' && jogoDaVelha[0][2] == 'O')|| // linha 1
+                    (jogoDaVelha[1][0] == 'O' && jogoDaVelha[1][1] == 'O' && jogoDaVelha[1][2] == 'O')|| // linha 2
+                    (jogoDaVelha[2][0] == 'O' && jogoDaVelha[2][1] == 'O' && jogoDaVelha[2][2] == 'O')|| // linha 3
+                    (jogoDaVelha[0][0] == 'O' && jogoDaVelha[1][0] == 'O' && jogoDaVelha[2][0] == 'O')|| // coluna 1
+                    (jogoDaVelha[0][0] == 'O' && jogoDaVelha[1][1] == 'O' && jogoDaVelha[2][1] == 'O')|| // coluna 2
+                    (jogoDaVelha[0][2] == 'O' && jogoDaVelha[1][2] == 'O' && jogoDaVelha[2][2] == 'O')|| // coluna 3
+                    (jogoDaVelha[0][0] == 'O' && jogoDaVelha[1][1] == 'O' && jogoDaVelha[2][2] == 'O')){ // diagonal
+                ganhou = true;
+                System.out.println("Parabens, jogador 2 ganhou");
+            } else if (jogada > 9){
+                System.out.println("Deu velha!");
             }
         }
     }
