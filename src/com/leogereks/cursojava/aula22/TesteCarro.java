@@ -13,6 +13,7 @@ public class TesteCarro {
 
         System.out.println(van.marca);
         System.out.println(van.modelo);
+        van.exibirAutonomia();
 
         Carro fusca = new Carro();
 
@@ -24,5 +25,13 @@ public class TesteCarro {
 
         System.out.println(fusca.marca);
         System.out.println(fusca.modelo);
+        fusca.exibirAutonomia();
+
+        double autonomia = van.obterAutonomia();
+        System.out.println("Autonomia obtida do carro é: "+autonomia);
+
+        double qtdCombustivel = van.calculaCombustivel(10);
+
+        System.out.println("Para andar 10km e necesario: "+qtdCombustivel);
     }
 }
